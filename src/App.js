@@ -1,7 +1,7 @@
 import { IconButton } from "@chakra-ui/react";
 import { useColorMode } from "@chakra-ui/color-mode";
-import { FaSun, FaMoon, FaInstagram, FaGithub, FaLinkedIn } from 'react-icons/fa';
-import { Flex, VStack, Heading } from '@chakra-ui/layout';
+import { FaSun, FaMoon, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { Flex, VStack, Heading, Spacer } from '@chakra-ui/layout';
 import React from 'react';
 
 const App = () => {
@@ -14,11 +14,13 @@ const App = () => {
                 <Heading 
                     ml="8" size="md" fontWeight="semibold" color="cyan.400">
                         KP Page
-                </Heading>
+                </Heading>    
+                <Spacer></Spacer>
+                <IconButton icon={isDark ? <FaSun /> : <FaMoon />} isRound={true} onClick={toggleColorMode}></IconButton>
+                <IconButton icon={<FaGithub />} isRound={true} onClick={toggleColorMode}></IconButton>
+                <IconButton icon={<FaLinkedin/>} isRound={true} onClick={toggleColorMode}></IconButton>
             </Flex>
-        <IconButton icon={isDark ? <FaSun /> : <FaMoon />} isRound={true} onClick={toggleColorMode}></IconButton>
         </VStack>
-
     )
 };
 
