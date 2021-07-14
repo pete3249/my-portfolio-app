@@ -3,6 +3,7 @@ import { useColorMode } from '@chakra-ui/color-mode';
 import { useMediaQuery } from '@chakra-ui/media-query';
 import { Circle, Stack, Flex} from '@chakra-ui/layout';
 import { Box, Text, Button, Image } from '@chakra-ui/react';
+import ProfilePhoto from '../images/CanvasProfile.jpg'
 
 function Header() {
 
@@ -12,7 +13,7 @@ function Header() {
 
     return (
         <Stack>
-            <Circle position="absolute" bg="blue.100" opacity="0.1" w="300px" h="300px" alignSelf="flex-end" />
+            <Circle position="absolute" bg="blue.200" opacity="0.1" w="300px" h="300px" alignSelf="flex-end" />
             <Flex 
                 direction={isNotSmallerScreen? "row" : "column"}
                 spacing="200px"
@@ -38,6 +39,7 @@ function Header() {
                     borderRadius="full"
                     backgroundColor="transparent"
                     boxSize="300px"
+                    src={ProfilePhoto}
                 ></Image>
             </Flex>
         </Stack>
